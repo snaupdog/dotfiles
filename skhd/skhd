@@ -1,0 +1,13 @@
+
+# moves focus between windows in the current focused display
+
+
+
+
+
+
+fn- h : yabai -m window --focus west
+fn - j : yabai -m window --focus south
+fn - k : yabai -m window --focus north
+fn - l : yabai -m window --focus east
+fn - q : yabai -m space --destroy
