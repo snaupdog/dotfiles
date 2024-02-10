@@ -195,7 +195,7 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["obsidian.nvim"] = {
-    config = { "\27LJ\2\n¢\1\0\0\5\0\a\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\5\0004\3\3\0005\4\3\0>\4\1\0035\4\4\0>\4\2\3=\3\6\2B\0\2\1K\0\1\0\15workspaces\1\0\0\1\0\2\tpath\19~/vaults/brain\tname\nbrain\1\0\2\tpath\18~/vaults/snau\tname\tsnau\nsetup\robsidian\frequire\0" },
+    config = { "\27LJ\2\n¢\1\0\0\5\0\a\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\5\0004\3\3\0005\4\3\0>\4\1\0035\4\4\0>\4\2\3=\3\6\2B\0\2\1K\0\1\0\15workspaces\1\0\0\1\0\2\tname\nbrain\tpath\19~/vaults/brain\1\0\2\tname\tsnau\tpath\18~/vaults/snau\nsetup\robsidian\frequire\0" },
     loaded = true,
     path = "/Users/nihalsatish/.local/share/nvim/site/pack/packer/start/obsidian.nvim",
     url = "https://github.com/epwalsh/obsidian.nvim"
@@ -209,11 +209,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/nihalsatish/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
-  },
-  ["rose-pine"] = {
-    loaded = true,
-    path = "/Users/nihalsatish/.local/share/nvim/site/pack/packer/start/rose-pine",
-    url = "https://github.com/rose-pine/neovim"
   },
   ["telescope.nvim"] = {
     loaded = true,
@@ -230,6 +225,12 @@ _G.packer_plugins = {
     path = "/Users/nihalsatish/.local/share/nvim/site/pack/packer/start/transparent.nvim",
     url = "https://github.com/xiyaowong/transparent.nvim"
   },
+  ["true-zen.nvim"] = {
+    config = { "\27LJ\2\n:\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\rtrue-zen\frequire\0" },
+    loaded = true,
+    path = "/Users/nihalsatish/.local/share/nvim/site/pack/packer/start/true-zen.nvim",
+    url = "https://github.com/Pocco81/true-zen.nvim"
+  },
   ["vim-tmux-navigator"] = {
     loaded = true,
     path = "/Users/nihalsatish/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
@@ -238,9 +239,13 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: true-zen.nvim
+time([[Config for true-zen.nvim]], true)
+try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\rtrue-zen\frequire\0", "config", "true-zen.nvim")
+time([[Config for true-zen.nvim]], false)
 -- Config for: obsidian.nvim
 time([[Config for obsidian.nvim]], true)
-try_loadstring("\27LJ\2\n¢\1\0\0\5\0\a\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\5\0004\3\3\0005\4\3\0>\4\1\0035\4\4\0>\4\2\3=\3\6\2B\0\2\1K\0\1\0\15workspaces\1\0\0\1\0\2\tpath\19~/vaults/brain\tname\nbrain\1\0\2\tpath\18~/vaults/snau\tname\tsnau\nsetup\robsidian\frequire\0", "config", "obsidian.nvim")
+try_loadstring("\27LJ\2\n¢\1\0\0\5\0\a\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\5\0004\3\3\0005\4\3\0>\4\1\0035\4\4\0>\4\2\3=\3\6\2B\0\2\1K\0\1\0\15workspaces\1\0\0\1\0\2\tname\nbrain\tpath\19~/vaults/brain\1\0\2\tname\tsnau\tpath\18~/vaults/snau\nsetup\robsidian\frequire\0", "config", "obsidian.nvim")
 time([[Config for obsidian.nvim]], false)
 
 _G._packer.inside_compile = false

@@ -6,9 +6,8 @@ local keymap = vim.keymap -- for conciseness
 local opts = { noremap = true, silent = true }
 local map = vim.api.nvim_set_keymap
 
-vim.api.nvim_set_keymap("n", "<leader>p", [[:normal rx<CR>]], { noremap = true, silent = true })
-
-keymap.set("n", "<leader>n", ":NvimTreeToggle<CR>")
+-- keymap.set("n", "<leader>n", ":NvimTreeToggle<CR>")
+keymap.set("n", "<leader>n", ":lua MiniFiles.open()<CR>")
 
 -- Resizing panes
 map("n", "<Left>", ":vertical resize +1<CR>", opts)
