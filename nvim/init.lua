@@ -1,5 +1,2 @@
-require("core.plugins")
-require("core.plugin_config")
-require("core.lsp")
-require("core.options")
-require("core.keymaps")
+require("cum.core")
+require("cum.lazy")

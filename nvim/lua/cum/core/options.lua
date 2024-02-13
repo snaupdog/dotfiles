@@ -1,9 +1,8 @@
 -- vim.cmd([[colorscheme tokyonight-night]])
--- vim.cmd("colorscheme rose-pine")
-vim.cmd("colorscheme gruvbox-material")
+--vim.cmd("colorscheme rose-pine")
+-- vim.cmd("colorscheme gruvbox-material")
 
 local options = {
-	conceallevel = 1, --obsidian checkbox
 
 	relativenumber = true,
 
@@ -52,7 +51,7 @@ local options = {
 	showtabline = 0,
 	laststatus = 2,
 	hidden = true,
-	lazyredraw = true, --faster scrolling
+	--lazyredraw = true, --faster scrolling
 }
 local cmd = vim.cmd -- execute Vim commands
 
