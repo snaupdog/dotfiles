@@ -1,0 +1,39 @@
+#!/bin/zsh
+
+
+#
+echo "$(DATE)"
+
+# QUOTES=( 'blaj die' "chill" 'moon')
+QUOTES=('
+    This thing that we call failure is not the falling down, but the staying down. - Mary Pickford
+    '
+
+    '
+    The soul would have no rainbow had the eyes no tears. — John Vance Cheney
+    '
+
+    '
+    You cannot believe now that you`ll ever feel better. But this is not true. You are sure to be happy again. Knowing this, truly believing it, will make you less miserable now. — Abraham Lincoln
+    '
+
+    '
+    Of all sad words of tongue or pen, the saddest are these, It might have been. — John Greenleaf Whittier
+    '
+    
+    '
+    Better by far you should forget and smile Than that you should remember and be sad. — Christina Rossetti
+    '
+
+    '
+    Our doubts are traitors,
+    and make us lose the good we oft might win,
+    by fearing to attempt. — William Shakespeare
+    '
+)
+let N=${#QUOTES[@]}
+RAND=$((1+$RANDOM % N)) 
+
+echo ${QUOTES[${RAND}]}
+
+

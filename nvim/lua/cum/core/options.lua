@@ -1,6 +1,7 @@
--- vim.cmd([[colorscheme tokyonight-night]])
---vim.cmd("colorscheme rose-pine")
--- vim.cmd("colorscheme gruvbox-material")
+vim.cmd("colorscheme habamax")
+
+-- vim.cmd("highlight Normal guibg = #101017")
+vim.cmd("highlight Normal guibg = #000000")
 
 local options = {
 
@@ -51,6 +52,7 @@ local options = {
 	showtabline = 0,
 	laststatus = 2,
 	hidden = true,
+	conceallevel = 1,
 	--lazyredraw = true, --faster scrolling
 }
 local cmd = vim.cmd -- execute Vim commands

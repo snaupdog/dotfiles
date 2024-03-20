@@ -1,42 +1,41 @@
 return {
+	{
+		"norcalli/nvim-colorizer.lua",
 
-    {
-        "nvim-lua/plenary.nvim", -- lua functions that many plugins use
-        event = 'InsertEnter'
-    },
+		keys = {
+			{ "col", "<cmd>ColorizerToggle<CR>", desc = "colorizer" },
+		},
+	},
 
-    {
-        'rcarriga/nvim-notify',
-        event = 'InsertEnter'
-    },
+	{
+		"nvim-lua/plenary.nvim", -- lua functions that many plugins use
+		event = "InsertEnter",
+	},
 
-    {
-        'MunifTanjim/nui.nvim',
-        event = 'InsertEnter'
-    },
+	{
+		"MunifTanjim/nui.nvim",
+		event = "InsertEnter",
+	},
 
-    {
-        'windwp/nvim-autopairs',
-        event = { "BufReadPre", "BufNewFile" },
-        opts = {} -- this is equalent to setup({}) function
-    },
+	{
+		"windwp/nvim-autopairs",
+		event = { "BufReadPre", "BufNewFile" },
+		opts = {}, -- this is equalent to setup({}) function
+	},
 
-    {
-        'numToStr/Comment.nvim',
-        opts = {
-            -- add any options here
-        },
-        event = "InsertEnter",
-    },
-    {
-        "eandrju/cellular-automaton.nvim",
+	{
+		"numToStr/Comment.nvim",
+		opts = {
+			-- add any options here
+		},
+		event = "InsertEnter",
+	},
+	{
+		"eandrju/cellular-automaton.nvim",
 
-        event = { "InsertEnter" },
-    },
-
-    {
-        "echasnovski/mini.nvim"
-
-    },
-
+		keys = {
+			{ "scr", "<cmd>CellularAutomaton scramble<CR>", desc = " scramble" },
+			{ "rai", "<cmd>CellularAutomaton make_it_rain<CR>", desc = " scramble" },
+		},
+	},
 }
