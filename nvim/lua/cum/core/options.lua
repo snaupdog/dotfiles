@@ -1,39 +1,27 @@
 vim.cmd("colorscheme habamax")
-
--- vim.cmd("highlight Normal guibg = #101017")
 vim.cmd("highlight Normal guibg = #000000")
 
 local options = {
 
 	relativenumber = true,
-
 	tabstop = 4,
 	softtabstop = 4,
 	shiftwidth = 4,
 	expandtab = true,
-
 	smartindent = true,
-
 	wrap = false,
-
 	swapfile = false,
 	backup = false,
 	undodir = os.getenv("HOME") .. "/.vim/undodir",
 	undofile = true,
-
 	hlsearch = false,
 	incsearch = true,
-
 	termguicolors = true,
-
 	scrolloff = 8,
 	signcolumn = "yes",
-
 	updatetime = 50,
-
 	splitright = true, -- split vertical window to the right
 	splitbelow = true, -- split horizontal window to the bottom
-
 	number = true,
 	completeopt = { "menu", "menuone", "noselect" },
 	smartcase = true,
@@ -53,7 +41,6 @@ local options = {
 	laststatus = 2,
 	hidden = true,
 	conceallevel = 1,
-	--lazyredraw = true, --faster scrolling
 }
 local cmd = vim.cmd -- execute Vim commands
 
