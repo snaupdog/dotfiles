@@ -1,4 +1,47 @@
 return {
+	-- {
+	-- 	"kylechui/nvim-surround",
+	-- 	version = "*", -- Use for stability; omit to use `main` branch for the latest features
+	-- 	event = "InsertEnter",
+	-- 	config = function()
+	-- 		require("nvim-surround").setup({
+	-- 			-- Configuration here, or leave empty to use defaults
+	-- 		})
+	-- 	end,
+	-- },
+	--
+
+	{
+		"folke/noice.nvim",
+		event = { "BufReadPre", "BufNewFile" },
+		opts = {},
+		dependencies = {
+			"MunifTanjim/nui.nvim",
+		},
+	},
+
+	{
+		"iamcco/markdown-preview.nvim",
+		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+		build = "cd app && npm install",
+		init = function()
+			vim.g.mkdp_filetypes = { "markdown" }
+		end,
+		ft = { "markdown" },
+	},
+
+	{
+		"stevearc/oil.nvim",
+		cmd = {
+			"Oil",
+		},
+		opts = {},
+		-- Optional dependencies
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+
+		vim.keymap.set("n", "<leader>n", "<CMD>Oil<CR>", { desc = "Open parent directory" }),
+	},
+
 	{
 		"norcalli/nvim-colorizer.lua",
 

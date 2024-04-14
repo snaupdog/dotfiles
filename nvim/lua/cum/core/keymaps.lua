@@ -26,3 +26,4 @@ map("x", "J", ":move '>+1<CR>gv-gv", silent)
 -- Keep visual mode indenting
 map("v", "<", "<gv", silent)
 map("v", ">", ">gv", silent)
+

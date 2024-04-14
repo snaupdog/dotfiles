@@ -1,3 +1,3 @@
-require("keymaps")
-require("options")
-print("this wroks")
+require("cum.core.keymaps")
+require("cum.core.options")
+

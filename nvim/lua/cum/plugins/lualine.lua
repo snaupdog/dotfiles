@@ -5,9 +5,7 @@ return {
 	config = function()
 		local lualine = require("lualine")
 		lualine.setup({
-			-- options = {
-			--   theme = my_lualine_theme,
-			-- },
+			options = { theme = "gruvbox" },
 			sections = {
 				lualine_a = { "mode" },
 				lualine_b = { "branch" },

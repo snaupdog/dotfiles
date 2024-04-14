@@ -13,7 +13,6 @@ return {
 				javascriptreact = { { "prettierd", "prettier" } },
 				typescriptreact = { { "prettierd", "prettier" } },
 				json = { { "prettierd", "prettier" } },
-				markdown = { { "prettierd", "prettier" } },
 				bash = { "beautysh" },
 				css = { { "prettierd", "prettier" } },
 				scss = { { "prettierd", "prettier" } },
