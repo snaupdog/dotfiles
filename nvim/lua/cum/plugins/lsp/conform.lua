@@ -17,19 +17,19 @@ return {
 				css = { { "prettierd", "prettier" } },
 				scss = { { "prettierd", "prettier" } },
 				html = { { "prettierd", "prettier" } },
+				dart = { "dartfmt" },
 			},
 		})
+
 		vim.api.nvim_create_autocmd("BufWritePre", {
 			pattern = "*",
 			callback = function(args)
-				require("conform").format({ bufnr = args.buf })
+				conform.format({
+					bufnr = args.buf,
+					timeout_ms = 500,
+					lsp_fallback = true,
+				})
 			end,
 		})
-
-		format_on_save = {
-			-- These options will be passed to conform.format()
-			timeout_ms = 500,
-			lsp_fallback = true,
-		}
 	end,
 }

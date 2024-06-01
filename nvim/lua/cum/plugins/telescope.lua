@@ -9,6 +9,7 @@ return {
 		{ "<leader>]", "<cmd>Telescope find_files<CR>", desc = "fussy finder" },
 		{ "<leader>fg", "<cmd>Telescope live_grep<CR>", desc = "gorilla grep" },
 		{ "<leader>fb", "<cmd>Telescope buffers<CR>", desc = "buff_as_fuck" },
+		{ "<leader>fc", "<cmd>Telescope current_buffer_fuzzy_find<CR>", desc = "find right now" },
 	},
 
 	config = function()
@@ -25,10 +26,5 @@ return {
 				},
 			},
 		})
-
-		-- 	-- set keymaps
-		-- 	local keymap = vim.keymap -- for conciseness
-		--
-		-- 	keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Find string under cursor in cwd" })
 	end,
 }

@@ -1,11 +1,10 @@
 return {
 	"nvim-lualine/lualine.nvim",
-	event = { "InsertEnter" },
 
 	config = function()
 		local lualine = require("lualine")
 		lualine.setup({
-			options = { theme = "gruvbox" },
+			options = { theme = "codedark" },
 			sections = {
 				lualine_a = { "mode" },
 				lualine_b = { "branch" },

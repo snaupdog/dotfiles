@@ -10,6 +10,15 @@ return {
 	-- 	end,
 	-- },
 	--
+	{
+		"nyoom-engineering/oxocarbon.nvim",
+		lazy = false, -- make sure we load this during startup if it is your main colorscheme
+		priority = 1000, -- make sure to load this before all the other start plugins
+		config = function()
+			-- load the colorscheme here
+			vim.cmd([[colorscheme oxocarbon]])
+		end,
+	},
 
 	{
 		"folke/noice.nvim",
@@ -18,16 +27,6 @@ return {
 		dependencies = {
 			"MunifTanjim/nui.nvim",
 		},
-	},
-
-	{
-		"iamcco/markdown-preview.nvim",
-		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-		build = "cd app && npm install",
-		init = function()
-			vim.g.mkdp_filetypes = { "markdown" }
-		end,
-		ft = { "markdown" },
 	},
 
 	{
