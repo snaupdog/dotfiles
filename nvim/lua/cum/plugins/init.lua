@@ -9,7 +9,7 @@ return {
 	-- 		})
 	-- 	end,
 	-- },
-	--
+	-- Lua
 	{
 		"nyoom-engineering/oxocarbon.nvim",
 		lazy = false, -- make sure we load this during startup if it is your main colorscheme
@@ -19,7 +19,6 @@ return {
 			vim.cmd([[colorscheme oxocarbon]])
 		end,
 	},
-
 	{
 		"folke/noice.nvim",
 		event = { "BufReadPre", "BufNewFile" },
@@ -43,14 +42,6 @@ return {
 	},
 
 	{
-		"norcalli/nvim-colorizer.lua",
-
-		keys = {
-			{ "col", "<cmd>ColorizerToggle<CR>", desc = "colorizer" },
-		},
-	},
-
-	{
 		"nvim-lua/plenary.nvim", -- lua functions that many plugins use
 		event = "InsertEnter",
 	},
@@ -59,13 +50,14 @@ return {
 		"MunifTanjim/nui.nvim",
 		event = "InsertEnter",
 	},
-
 	{
-		"windwp/nvim-autopairs",
-		event = { "BufReadPre", "BufNewFile" },
-		opts = {}, -- this is equalent to setup({}) function
+		"altermo/ultimate-autopair.nvim",
+		event = { "InsertEnter", "CmdlineEnter" },
+		branch = "v0.6", --recommended as each new version will have breaking changes
+		opts = {
+			--Config goes here
+		},
 	},
-
 	{
 		"numToStr/Comment.nvim",
 		opts = {

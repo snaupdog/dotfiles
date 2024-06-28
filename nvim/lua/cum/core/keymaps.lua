@@ -6,8 +6,6 @@ local keymap = vim.keymap -- for conciseness
 local opts = { noremap = true, silent = true }
 local map = vim.api.nvim_set_keymap
 
--- keymap.set("n", "<leader>n", ":lua MiniFiles.open()<CR>")
-
 map("n", "<C-d>", '"_dd', opts)
 
 map("n", "<C-w>", ":w<CR>", opts)

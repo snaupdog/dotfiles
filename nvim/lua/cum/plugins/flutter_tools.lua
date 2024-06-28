@@ -5,7 +5,8 @@ return {
 		"stevearc/dressing.nvim", -- optional for better UI
 		"neovim/nvim-lspconfig", -- LSP configuration
 	},
-	event = { "InsertEnter" },
+	ft = { "dart" },
+	-- event = { "BufReadPre", "BufNewFile" },
 	config = function()
 		require("flutter-tools").setup({
 			lsp = {
@@ -13,7 +14,7 @@ return {
 					local opts = { buffer = bufnr, noremap = true, silent = true }
 					vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
 					vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
-					vim.keymap.set("n", "<leader>ca", vim.lsp.buf.range_code_action, opts)
+					-- vim.keymap.set("n", "<leader>ra", vim.lsp.buf.range_code_action, opts)
 					vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
 					vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
 					vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
