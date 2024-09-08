@@ -95,6 +95,16 @@ return {
 		require("lspconfig")["pylsp"].setup({
 			on_attach = on_attach,
 			capabilities = capabilities,
+			settings = {
+				pylsp = {
+					plugins = {
+						pycodestyle = {
+							ignore = { "W391", "E303", "W293" },
+							maxLineLength = 100,
+						},
+					},
+				},
+			},
 		})
 
 		require("lspconfig")["lua_ls"].setup({
@@ -113,3 +123,4 @@ return {
 		})
 	end,
 }
+-- this is an example

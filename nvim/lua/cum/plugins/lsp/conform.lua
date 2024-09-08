@@ -26,7 +26,7 @@ return {
 			callback = function(args)
 				conform.format({
 					bufnr = args.buf,
-					timeout_ms = 500,
+					timeout_ms = 750,
 					lsp_fallback = true,
 				})
 			end,

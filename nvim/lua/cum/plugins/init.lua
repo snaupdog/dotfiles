@@ -10,6 +10,12 @@ return {
 	-- 	end,
 	-- },
 	-- Lua
+
+	-- { "ellisonleao/glow.nvim", config = true, cmd = "Glow" },
+	{
+		ft = "csv",
+		"mechatroner/rainbow_csv",
+	},
 	{
 		"nyoom-engineering/oxocarbon.nvim",
 		lazy = false, -- make sure we load this during startup if it is your main colorscheme
