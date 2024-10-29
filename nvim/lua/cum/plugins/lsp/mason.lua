@@ -31,8 +31,8 @@ return {
 				"html",
 				"emmet_language_server",
 				"eslint",
-				"tsserver",
 				"tailwindcss",
+				"ts_ls",
 
 				"lua_ls",
 				"pylsp",
@@ -62,6 +62,15 @@ return {
 			capabilities = capabilities,
 		})
 
+		require("lspconfig")["marksman"].setup({
+			on_attach = on_attach,
+			capabilities = capabilities,
+		})
+
+		require("lspconfig")["ts_ls"].setup({
+			on_attach = on_attach,
+			capabilities = capabilities,
+		})
 		require("lspconfig")["html"].setup({
 			on_attach = on_attach,
 			capabilities = capabilities,
@@ -73,11 +82,6 @@ return {
 		})
 
 		require("lspconfig")["eslint"].setup({
-			on_attach = on_attach,
-			capabilities = capabilities,
-		})
-
-		require("lspconfig")["tsserver"].setup({
 			on_attach = on_attach,
 			capabilities = capabilities,
 		})
@@ -99,8 +103,8 @@ return {
 				pylsp = {
 					plugins = {
 						pycodestyle = {
-							ignore = { "W391", "E303", "W293" },
-							maxLineLength = 100,
+							ignore = { "W391", "E303", "W293", "W503", "E302", "W291" },
+							maxLineLength = 150,
 						},
 					},
 				},

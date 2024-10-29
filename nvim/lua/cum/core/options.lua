@@ -9,7 +9,7 @@ local options = {
 	shiftwidth = 4,
 	expandtab = true,
 	smartindent = true,
-	wrap = false,
+	wrap = true,
 	swapfile = false,
 	backup = false,
 	undodir = os.getenv("HOME") .. "/.vim/undodir",
@@ -42,10 +42,9 @@ local options = {
 	hidden = true,
 	conceallevel = 1,
 }
-local cmd = vim.cmd -- execute Vim commands
 
 -- don't auto commenting new lines
-cmd([[au BufEnter * set fo-=c fo-=r fo-=o]])
+vim.cmd([[au BufEnter * set fo-=c fo-=r fo-=o]])
 
 for i, j in pairs(options) do
 	vim.opt[i] = j

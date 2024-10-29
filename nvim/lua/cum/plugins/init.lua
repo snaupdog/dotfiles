@@ -11,7 +11,6 @@ return {
 	-- },
 	-- Lua
 
-	-- { "ellisonleao/glow.nvim", config = true, cmd = "Glow" },
 	{
 		ft = "csv",
 		"mechatroner/rainbow_csv",
@@ -22,7 +21,16 @@ return {
 		priority = 1000, -- make sure to load this before all the other start plugins
 		config = function()
 			vim.opt.background = "dark"
-			vim.cmd([[colorscheme oxocarbon]])
+			-- vim.cmd([[colorscheme oxocarbon]])
+		end,
+	},
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			vim.opt.background = "dark"
+			vim.cmd([[colorscheme tokyonight]])
 		end,
 	},
 	{

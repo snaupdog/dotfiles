@@ -1,6 +1,7 @@
 return {
 	"epwalsh/obsidian.nvim",
 	version = "*", -- recommended, use latest release instead of latest commit
+	ui = { enable = false },
 	lazy = true,
 	event = {
 		-- If you want to use the home shortcut '~' here you need to call 'vim.fn.expand'.
@@ -48,7 +49,7 @@ return {
 			-- Optional, if you want to change the date format of the default alias of daily notes.
 			alias_format = "%B %-d, %Y",
 			-- Optional, if you want to automatically insert a template from your template directory like 'daily.md'
-			template = "hi.md",
+			template = "dailies.md",
 		},
 
 		templates = {
