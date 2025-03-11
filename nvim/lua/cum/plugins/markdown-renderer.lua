@@ -18,6 +18,19 @@ return {
 	config = function()
 		local render = require("render-markdown")
 		render.setup({
+			bullet = {
+				enabled = true,
+				icons = { "●", "○", "◆", "◇" },
+				ordered_icons = {},
+				left_pad = 0,
+				right_pad = 1.5,
+				highlight = "RenderMarkdownBullet",
+			},
+			checkbox = {
+				unchecked = { icon = "✘ " },
+				checked = { icon = "✔ ", scope_highlight = "@markup.strikethrough" },
+				custom = { todo = { rendered = "◯ " } },
+			},
 
 			-- Adds heavy border
 			pipe_table = { preset = "heavy" },

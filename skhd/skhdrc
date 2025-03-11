@@ -1,9 +1,9 @@
 
 # focus window
-alt - h : yabai -m window --focus west
-alt - j : yabai -m window --focus south
-alt - k : yabai -m window --focus north
-alt - l : yabai -m window --focus east
+ctrl- u : yabai -m window --focus west
+ctrl - i : yabai -m window --focus south
+ctrl - o : yabai -m window --focus north
+ctrl - p : yabai -m window --focus east
 
 # swap managed window
 shift + alt - h : yabai -m window --swap west
@@ -38,8 +38,10 @@ alt - t : yabai -m window --toggle float;\
 # toggle window split type
 alt - e : yabai -m window --toggle split
 
-#dealing with spaces
+# closer window
+alt - q : yabai -m window --close
 
+#Send window to a space
 shift + alt - 1 : yabai -m window --space 1;
 shift + alt - 2 : yabai -m window --space 2;
 shift + alt - 3 : yabai -m window --space 3;
@@ -48,11 +50,11 @@ shift + alt - 5 : yabai -m window --space 5;
 shift + alt - 6 : yabai -m window --space 6;
 shift + alt - 7 : yabai -m window --space 7;
 
-cmd + ctrl - 1 : yabai -m space --focus 1
-cmd + ctrl - 2 : yabai -m space --focus 2
-cmd + ctrl - 3 : yabai -m space --focus 3
-cmd + ctrl - 4 : yabai -m space --focus 4
-cmd + ctrl - 5 : yabai -m space --focus 5
+ctrl - 1 : yabai -m space --focus 1
+ctrl - 2 : yabai -m space --focus 2
+ctrl - 3 : yabai -m space --focus 3
+ctrl - 4 : yabai -m space --focus 4
+ctrl - 5 : yabai -m space --focus 5
 
 # delete focused space
 alt - q : yabai -m space --destroy

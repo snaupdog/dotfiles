@@ -30,6 +30,7 @@ return {
 				"cssls",
 				"html",
 				"emmet_language_server",
+				"java_language_server",
 				"eslint",
 				"tailwindcss",
 				"ts_ls",
@@ -55,6 +56,11 @@ return {
 		---@diagnostic disable-next-line: undefined-global
 		local capabilities = vim.lsp.protocol.make_client_capabilities()
 		capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
+
+		require("lspconfig")["java_language_server"].setup({
+			on_attach = on_attach,
+			capabilities = capabilities,
+		})
 
 		-- WEB DEV LSPs
 		require("lspconfig")["cssls"].setup({
@@ -103,7 +109,7 @@ return {
 				pylsp = {
 					plugins = {
 						pycodestyle = {
-							ignore = { "W391", "E303", "W293", "W503", "E302", "W291" },
+							ignore = { "W391", "E305", "E303", "W293", "W503", "E302", "W291" },
 							maxLineLength = 150,
 						},
 					},

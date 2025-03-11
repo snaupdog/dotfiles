@@ -1,11 +1,11 @@
 return {
 
 	"lewis6991/gitsigns.nvim",
-	event = "VeryLazy",
+
+	cmd = "Gitsigns detach",
 	config = function()
 		local gitsigns = require("gitsigns")
 		gitsigns.setup({
-
 			-- on_attach = function(bufnr)
 			--
 			--    local function map(mode, l, r, opts)

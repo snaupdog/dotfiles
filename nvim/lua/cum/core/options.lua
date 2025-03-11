@@ -2,14 +2,18 @@
 -- vim.cmd("highlight Normal guibg = #0000ff")
 
 local options = {
+	linebreak = true,
+	wrap = true,
 
 	relativenumber = true,
+
 	tabstop = 4,
-	softtabstop = 4,
-	shiftwidth = 4,
-	expandtab = true,
 	smartindent = true,
-	wrap = true,
+	autoindent = true,
+	expandtab = true,
+	shiftwidth = 4,
+
+	softtabstop = 4,
 	swapfile = false,
 	backup = false,
 	undodir = os.getenv("HOME") .. "/.vim/undodir",
@@ -30,7 +34,6 @@ local options = {
 	clipboard = "unnamedplus",
 	fileencoding = "utf8",
 	showmode = false,
-	autoindent = true,
 	smarttab = true,
 	endofline = false,
 	fixendofline = false,

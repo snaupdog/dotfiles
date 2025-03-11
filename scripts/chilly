@@ -1,0 +1,15 @@
+#!/bin/zsh
+SESSION="chil"
+
+tmux new-session -d -s ${SESSION} 
+tmux send-keys -t ${SESSION} "cd ~/vaults/" C-m
+tmux send-keys -t ${SESSION} "tmux new-window" C-m
+tmux send-keys -t ${SESSION} "cd" C-m
+tmux send-keys -t ${SESSION} "tmux new-window" C-m
+tmux send-keys -t ${SESSION} "cl" C-m
+tmux send-keys -t ${SESSION} "cd ~/.config/" C-m
+
+
+
+
+

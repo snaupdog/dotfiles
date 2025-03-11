@@ -15,15 +15,15 @@ return {
 		ft = "csv",
 		"mechatroner/rainbow_csv",
 	},
-	{
-		"nyoom-engineering/oxocarbon.nvim",
-		lazy = false, -- make sure we load this during startup if it is your main colorscheme
-		priority = 1000, -- make sure to load this before all the other start plugins
-		config = function()
-			vim.opt.background = "dark"
-			-- vim.cmd([[colorscheme oxocarbon]])
-		end,
-	},
+	-- {
+	-- 	"nyoom-engineering/oxocarbon.nvim",
+	-- 	lazy = false, -- make sure we load this during startup if it is your main colorscheme
+	-- 	priority = 1000, -- make sure to load this before all the other start plugins
+	-- 	config = function()
+	-- 		vim.opt.background = "dark"
+	-- 		-- vim.cmd([[colorscheme oxocarbon]])
+	-- 	end,
+	-- },
 	{
 		"folke/tokyonight.nvim",
 		lazy = false,
@@ -40,6 +40,19 @@ return {
 		dependencies = {
 			"MunifTanjim/nui.nvim",
 		},
+		-- config = function()
+		-- 	require("lualine").setup({
+		-- 		sections = {
+		-- 			lualine_x = {
+		-- 				{
+		-- 					require("noice").api.statusline.mode.get,
+		-- 					cond = require("noice").api.statusline.mode.has,
+		-- 					color = { fg = "#ff9e64" },
+		-- 				},
+		-- 			},
+		-- 		},
+		-- 	})
+		-- end,
 	},
 
 	{
@@ -66,7 +79,7 @@ return {
 	},
 	{
 		"altermo/ultimate-autopair.nvim",
-		event = { "InsertEnter", "CmdlineEnter" },
+		event = { "InsertEnter" },
 		branch = "v0.6", --recommended as each new version will have breaking changes
 		opts = {
 			--Config goes here
